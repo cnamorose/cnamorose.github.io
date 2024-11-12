@@ -42,9 +42,9 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: npm build #수정
+      - name: Build with Jekyll #수정 npm build
         # Outputs to the './_site' directory by default
-        run: npm install && npm run build #수정 
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" #수정 npm install && npm run build
         env:
           JEKYLL_ENV: production
       - name: Upload artifact

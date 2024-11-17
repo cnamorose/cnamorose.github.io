@@ -225,3 +225,7 @@ jekyll-archives:
     category: /categories/:name/
 
 future: true
+
+plugins:
+  - jekyll-last-modified-at
+

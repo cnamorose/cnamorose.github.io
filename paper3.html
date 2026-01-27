@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>포트폴리오 웹사이트</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 상단 바 (있다면 그대로) -->
+  <header class="top-bar">
+    <h1>Publications</h1>
+  </header>
+
+  <!-- 왼쪽 기준 레이아웃 -->
+  <div class="layout">
+    <section class="project-detail">
+      <a href="index.html" class="back-button">← 돌아가기</a>
+
+      <div class="project-hero">
+        <img src="images/paper3/paper3.png" alt="포트폴리오 웹사이트 대표 이미지" />
+      </div>
+
+      <div class="project-content">
+      <h1>D2FP: Learning Implicit Prior for Human Parsing</h1>
+      <p class="project-summary">D2FP 구조의 다양한 실험 코드 구현  </p>
+      <div class="project-meta">
+  <strong>Keywords</strong>
+  <div class="keyword-tags">
+    <span>Human Parsing</span>
+    <span>Implicit Prior Learning</span>
+  </div>
+</div>
+      <figure class="project-hero project-hero--figure">
+        <img src="images/paper3/paper3-1.png" alt="a" />
+      </figure>
+      <figure class="project-hero project-hero--figure">
+        <img src="images/paper3/3-2.png" alt="a" />
+      </figure>
+
+      <h2>프로젝트 소개</h2>
+      <p>
+        • 휴먼 파싱(Human Parsing) 성능 향상을 위한 D2FP 모델 제안</p>
+<p>• 고정된 구조적 사전 지식에 의존하는 기존 방법의 한계를 극복하기 위해, 입력 이미지 기반의 동적 암묵적 사전 학습 방식 적용</p>
+<p>• 모델은 사전 추출 모듈, 사전 임베딩 모듈, 다중 스케일 듀얼 트랜스포머 디코더 3가지 핵심 모듈로 구성</p>
+      <p>• WACV 2025 국제학회논문 게재</p>
+ 
+
+      <h2>개발 환경</h2>
+      <p>Python, Pytorch, Linux/Ubuntu, Detectron2</p>
+
+      <h2>프로젝트 설명</h2>
+      <p>
+        본 프로젝트는 다양한 포즈나 가려짐이 있는 환경에서도 사람의 신체 부위를 정확하게 분할할 수 있는 입력 의존형 Human Parsing 모델을 제안합니다.
+      </p>
+
+      <p>기존 Human Parsing 기법들은 사전에 정의된 신체 구조나 그래프 기반 설계를 필요로 하며, 이로 인해 자세가 복잡하거나 일부가 가려진 이미지에서 정확도가 떨어지고, 다양한 상황에 대응하기 어려운 한계가 있었습니다.
+      </p>
+      <p>이를 해결하기 위해 본 연구에서는 Transformer 기반 구조를 활용하여, 사람 이미지로부터 암묵적인 신체 구조(Prior)를 동적으로 학습하는 시스템을 개발했습니다.</p>
+
+<p>- <strong>Prior Extraction Module</strong>: 멀티스케일 특징과 마스크 정보를 융합하여 입력 이미지에 따라 달라지는 구조 정보를 추출합니다.</p>
+<p>- <strong>Prior Embedding Module</strong>: Slot Attention을 통해 추출된 구조 정보를 object query로 변환하며, 디코더에서 얻은 고수준 정보를 다시 prior에 반영해 구조를 보강합니다.</p>
+<p>- <strong>Dual Transformer Decoder</strong>: 추론 과정에서 object query와 픽셀 특징을 교차로 최적화하여, 신체 부위를 정밀하게 예측합니다.</p>
+<p>기존 방식이 사용하는 고정된 구조 없이도 복잡한 포즈나 다중 인물 상황에서도 정확하고 유연한 parsing이 가능하며, LIP 및 CIHP 데이터셋 기준으로 기존 SOTA 대비 높은 mIoU 성능을 달성했습니다. 또한, 사람의 일부가 가려진 이미지에서도 안정적으로 동작해, 
+  실제 애플리케이션에 적용 가능한 강건한 parsing 모델로 활용할 수 있습니다.</p>
+
+<h2>기여 내용</h2>
+<p>해당 연구에서는 휴먼 파싱 문제를 해결하기 위해 입력 이미지 기반의 동적 암묵적 사전 학습 방식을 적용하여, 기존 고정된 구조적 사전 지식에 의존하는 접근법의 한계를 극복하는 것을 목표로 하였습니다.
+연구 과정에서 다양한 실험 수행을 위한 코드 구현 작업을 담당하여, 모듈별 성능 비교 실험을 위한 실험 코드 작성과 하이퍼파라미터 설정에 따른 성능 분석 실험을 수행하여 모델 최적화 과정에 기여했습니다.</p>
+
+<p>실험결과, D2FP는 기존 방법들과 비교하여 정성적 및 정략적 평가에서 우수한 성능을 보였으며,  높은 정확도와 안정적인 성능을 입증했습니다.</p>
+
+      
+  
+    </section>
+  </div>
+</body>
+</html>

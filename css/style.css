@@ -70,21 +70,31 @@ body {
   }
 }
 
+/* ===== Profile Card Alignment ===== */
 .profile-card img {
-  width: 140px;
-  max-width: 100%;
-  border-radius: 10px;
-}
+  display: block;
+  margin: 0 auto 16px;
 
-/* 데스크톱 이미지 */
-@media (min-width: 768px) {
-  .profile-card img {
-    width: 200px;
-  }
+  max-width: 100%;     /* 부모보다 커지지 않게 */
+  height: auto;        /* 비율 유지 */
+  object-fit: cover;   /* 깨짐 방지 */
 }
 
 .profile-info h2 {
-  margin-bottom: 14px;
+  text-align: center; /* 이름 중앙 */
+  margin-bottom: 20px;
+}
+
+/* 데스크톱 이미지 크기 */
+/* @media (min-width: 768px) {
+  .profile-card img {
+    width: 200px;
+  }
+} */
+@media (max-width: 480px) {
+  .profile-card img {
+    width: 140px;
+  }
 }
 
 .info-block {

@@ -572,3 +572,28 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(30, 58, 138, 0.25);
 }
+
+.profile-cert {
+  width: 100%;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  margin-bottom: 32px;
+}
+
+.profile-cert h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.cert-item strong {
+  display: block;
+  font-size: 14px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.cert-item p {
+  font-size: 13px;
+  color: #475569;
+}
